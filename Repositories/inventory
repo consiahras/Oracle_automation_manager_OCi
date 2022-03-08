@@ -1,0 +1,6 @@
+[web]
+144.24.188.100
+129.159.252.255
+
+[ansible_manager]
+localhost ansible_connection=local

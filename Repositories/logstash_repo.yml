@@ -1,0 +1,14 @@
+---
+- name: Add all repo needed in hosts
+  hosts: all
+  remote_user: opc
+
+  tasks:
+    - name: Adding logstash repo
+      ansible.builtin.yum_repository:
+        name: logstash_repo
+        description: Repository for logstash 8.x
+        file: repo_logstash_8x
+        baseurl: https://artifacts.elastic.co/packages/8.x/yum
+        gpgcheck: yes
+        gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
