@@ -2,8 +2,9 @@
 - name: Add all repo needed in hosts
   hosts: all
   remote_user: opc
-  become: yes
-  become_method: su
+  become: True
+  become_method: sudo
+  become_user: root
 
   tasks:
     - name: Adding logstash repo
