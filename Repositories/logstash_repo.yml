@@ -6,7 +6,7 @@
   tasks:
     - name: Adding logstash repo
       ansible.builtin.yum_repository:
-        name: logstash_repo
+        name: elastic_stack_repo
         description: Repository for logstash 8.x
         file: repo_logstash_8x
         baseurl: https://artifacts.elastic.co/packages/8.x/yum

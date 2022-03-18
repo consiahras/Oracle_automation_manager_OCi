@@ -1,0 +1,11 @@
+---
+- name: Add all repo needed in hosts
+  hosts: all
+  remote_user: opc
+
+  tasks:
+    - name: Adding logstash repo
+      ansible.builtin.yum_repository:
+        name: logstash_repo
+        state: absent
+      notify: yum-clean-metadata
